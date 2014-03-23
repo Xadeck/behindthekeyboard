@@ -9,8 +9,8 @@ Configuring your shell in order to reduce the activation cost of frequent action
 
 Editing the command line in Bash is powered by the Readline library. As always, taking some time to read the [relevant section of the Bash manual][Manual] will teach you a few things worth knowing. In that post, I'll assume you've read the two short first sections:
 
-- [Introduction and Notation]:	  	Notation used in this text.
-- [Readline Interaction]:	  	The minimum set of commands for editing a line.
+- [Introduction and Notation][]:	  	Notation used in this text.
+- [Readline Interaction][]:	  	The minimum set of commands for editing a line.
 
 There are three things to know to configure your input.
 
@@ -35,7 +35,7 @@ $ bind -p | grep dump
 "\C-hv": dump-variables
 {%  endterminal %}
 
-Now press **Ctrl+h v** to see the configurations of variables. Explore the [Manual] for meaning of these functions and variables, and which one can be handy to you. 
+Now press **Ctrl+h v** to see the configurations of variables. Explore the [Manual][] for meaning of these functions and variables, and which one can be handy to you. 
 
 ## Moving between words
 
@@ -47,7 +47,7 @@ In my text editor, the keys **Ctrl+-←** and **Ctrl+→** are used to move betw
 "\e[1;5D": backward-word
 ```
 
-The syntax for keyboard shortcuts can be found in the [Manual]. There are other useful moving commands. For example, you can _jump_ to a given character forward or backward
+The syntax for keyboard shortcuts can be found in the [Manual][]. There are other useful moving commands. For example, you can _jump_ to a given character forward or backward
 
 ## Reusing previous command's argument
 
@@ -59,7 +59,7 @@ Consider the following workflow:
 
 Having to type twice the path to the file - even with good autocompletion - is tedious. This is where the `yank-last-arg` becomes very handy. By default, it is bound to `\e.` and `\e_`. For the second command, just type `git add` and then hit `\e.`  (read **Alt+.**) and enjoy! 
 
-Personally, the `Esc` key in keybindings is not handy (too much trajectory on the keyboard for my left pinky!). On Linux terminals, it's ok because the `Alt` key is an equivalent. But on my Mac laptop, that does not work natively. Luckily, I'm using [iTerm2] which can be configured to do so. Either read [this post](http://thinkingeek.com/2012/11/17/mac-os-x-iterm-meta-key/), or simply go to the Preferences and edit as shown on image below:
+Personally, the `Esc` key in keybindings is not handy (too much trajectory on the keyboard for my left pinky!). On Linux terminals, it's ok because the `Alt` key is an equivalent. But on my Mac laptop, that does not work natively. Luckily, I'm using [iTerm2][] which can be configured to do so. Either read [this post](http://thinkingeek.com/2012/11/17/mac-os-x-iterm-meta-key/), or simply go to the Preferences and edit as shown on image below:
 
 ![iTerm preferences]({{ site.url }}/assets/iterm_preferences.png)
 
@@ -141,7 +141,7 @@ And that's it, you now need to type the path once and then hit **Alt+,**!
 ## Conclusion
 
 
-There are other powerful Readline functions for editing, moving, etc. but I don't need them frequently enough to have integrated them. I just know they exist so if I need it, I'll read the [Manual] to figure out how to use them. But the features listed in that post are now engraved in my brain as I use them all the time. And I've put my `.inputrc` file as [a Gist on Github](https://gist.github.com/Xadeck/9710435#file-inputrc) so that I can put it on every computer I use.
+There are other powerful Readline functions for editing, moving, etc. but I don't need them frequently enough to have integrated them. I just know they exist so if I need it, I'll read the [Manual][] to figure out how to use them. But the features listed in that post are now engraved in my brain as I use them all the time. And I've put my `.inputrc` file as [a Gist on Github](https://gist.github.com/Xadeck/9710435#file-inputrc) so that I can put it on every computer I use.
 
 [Manual]: https://www.gnu.org/software/bash/manual/html_node/Command-Line-Editing.html#Command-Line-Editing
 [Introduction and Notation]: https://www.gnu.org/software/bash/manual/html_node/Introduction-and-Notation.html#Introduction-and-Notation

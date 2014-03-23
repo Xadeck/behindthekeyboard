@@ -19,6 +19,8 @@ and browse [http://localhost:4000](http://localhost:4000). Submit your proposed 
 
 # For internal contributors
 
+## Editing posts
+
 Just clone the project, and link the `_deploy` directory to the GitHub pages one (you must have access to this is a private repository):
 
 ```bash
@@ -32,6 +34,21 @@ Then do your edit, and simply deploy them:
 ``` bash
 rake generate
 rake deploy
+```
+## Updating Octopress
+
+Add once Octopress's remote repository to your clone:
+``` bash
+cd behindthekeyboard/
+git remote add octopress git://github.com/imathis/octopress.git
+```
+
+Then update from Octopress's master whenever desired using [Updating Octopress](http://octopress.org/docs/updating/) instructions. Short version is :
+``` bash
+git pull octopress master     # Get the latest Octopress
+bundle install                # Keep gems updated
+rake update_source            # update the template's source
+rake update_style             # update the template's style
 ```
 
 

@@ -7,6 +7,8 @@ comments: true
 
 List comprehensions allow you to constructs arrays (lists in Python) of elements by describing the expression to build them, very similar to the way you write sets descriptions in mathematics. You will find many tutorials about this on the web, so as usual in this blog, I will focus on practical examples that took me a little bit more that just reading the how-tos.
 
+<!-- more -->
+
 Here is the problem that will drive this post. Given a set of ages, and for each age, a number of people of that age in a considered population, the goal is to write a procedure that draws a random age respecting that distribution. 
 
 Let’s first start with the datastructure. As usual in Python, thanks to builtin dictionaries and tuples, no need to start with a `Age` or `Distribution` class. A dictionary will suffice:

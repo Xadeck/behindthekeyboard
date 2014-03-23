@@ -7,6 +7,8 @@ comments: true
 
 In this post, I want to describe a very simple setup for getting started with AppEngine and being able to prototype an application very quickly, with _minimum_ boilerplate code and additional frameworks to understand.
 
+<!-- more -->
+
 # Pre-requisites
 
 This assumes you're a programmer, know how to use the shell in Linux/OsX, and have your favorite text editor configured for you.

@@ -15,7 +15,7 @@ Editing the command line in Bash is powered by the Readline library. As always, 
 There are three things to know to configure your input.
 
 1. configuration is done in `~/.inputrc` file
-2. this file can be reloaded by pressing `C-x C-r`
+2. this file can be reloaded by pressing **Ctrl+x Ctrl+r**
 3. you can list all the bindings with the command `bind -p`
 
 Being efficient with Readline means knowing the existing function that exists, and binding them to shortcut that suits you. Let's start with a simple example. Edit your `~/.inputrc` and add the following lines:
@@ -89,10 +89,10 @@ go:
 $ rm *.o
 {% endterminal %}
 
-However, it is potentially risky. I once (true story) deleted an entire directory because I typed `rm * bak` with an unfortunate space. To avoid running into that again, when a command has risky side effect, I _expand_ the glob using `"\C-x*": glob-expand-word`. It is also useful if I want to get an expanded glob, but without one file. Let's say I want to delete all text files but README.txt. I would:
+However, it is potentially risky. I once (true story) deleted an entire directory because I typed `rm * bak` with an unfortunate space. To avoid running into that again, when a command has risky side effect, I _expand_ the glob using binding `"\C-x*": glob-expand-word`. It is also useful if I want to get an expanded glob, but without one file. Let's say I want to delete all text files but README.txt. I would:
 
 - type `rm *.txt`
-- hit `C-x*` to expand the whole list of files matching that glob
+- hit **Ctrl+x ** to expand the whole list of files matching that glob
 - move along the command line to remove README.txt
 - hit Enter.
 
@@ -106,7 +106,7 @@ Bash history is very handy, and you definitely want to have the [Bash History Ch
 "C-x!": magic-space
 ```
 
-Now, you just have to type `!m`, followed by `C-x!` and then move along the command line and edit it has you want. Much faster than searching through the history with the arrow keys.
+Now, you just have to type `!m`, followed by **Ctrl+x !** and then move along the command line and edit it has you want. Much faster than searching through the history with the arrow keys.
 
 ## Arbitrary macro
 

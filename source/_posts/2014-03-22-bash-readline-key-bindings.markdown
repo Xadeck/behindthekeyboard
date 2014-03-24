@@ -7,9 +7,6 @@ comments: true
 
 Configuring your shell in order to reduce the activation cost of frequent actions is key to both productivity and pleasure in working. In this post, I'll list a few of the _input_ configurations I found useful for my practice.
 
-* list element with functor item
-{:toc}
-
 <!-- more -->
 
 Editing the command line in Bash is powered by the Readline library. As always, taking some time to read the [relevant section of the Bash manual][Manual] will teach you a few things worth knowing. In that post, I'll assume you've read the two short first sections:
@@ -33,12 +30,12 @@ Being efficient with Readline means knowing the existing function that exists, a
 ```
 
 Now press `C-x C-r` to reload that file. Beware that there is no feedback that this has happened. Now check that the new bindings are active.
-{%  terminal %}
+{% terminal %}
 $ bind -p | grep dump
 "\C-hf": dump-functions
 # dump-macros (not bound)
 "\C-hv": dump-variables
-{%  endterminal %}
+{% endterminal %}
 
 Now press **Ctrl+h v** to see the configurations of variables. Explore the [Manual][] for meaning of these functions and variables, and which one can be handy to you. 
 
